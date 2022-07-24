@@ -56,7 +56,7 @@ const SignupForm = ({submitForm}) => {
                 name="fullname"
                 value={values.fullname} 
                 onChange={handleChange}
-                ref = "fullname"
+               
                  />
                 {errors.fullname && <p className="error">{errors.fullname}</p>}
 
@@ -70,7 +70,7 @@ const SignupForm = ({submitForm}) => {
                 name="email"
                 value={values.email} 
                 onChange={handleChange}
-                ref = "email"
+                
                 />
                {errors.email && <p className="error">{errors.email}</p>}
 
@@ -84,7 +84,7 @@ const SignupForm = ({submitForm}) => {
                 name="password"
                 value={values.password} 
                 onChange={handleChange}
-                ref = "password"
+                
                 />
                {errors.password && <p className="error">{errors.password}</p>}
 

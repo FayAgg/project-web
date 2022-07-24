@@ -26,3 +26,12 @@ connection.connect(function(err) {
     }
 });
 
+// Insert to database
+app.get("/",(req,res) =>{
+
+    const sqlInsert = "INSERT INTO user (username,email,password,location_x,location_y) VALUES ('mariadb','www.mariadb@gmail.com','bestsqlever1@3','45','34');"
+    connection.query(sqlInsert,(err,result) =>{
+        res.send("hello");
+        console.log("One row inserted!");
+    })
+})
