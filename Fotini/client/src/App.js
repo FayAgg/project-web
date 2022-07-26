@@ -3,6 +3,7 @@ import Toolbar from './components/Toolbar/Toolbar';
 import { Component } from 'react';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
+import stats from'./images/stats.png';
 
 class App extends Component {
 
@@ -40,6 +41,13 @@ class App extends Component {
   
       <main style={{ marginTop: '64px'}}>
       <p> This is the page content </p>
+
+      <nav className="nav">
+        <div className="container">
+          
+          <img  src={stats}/>
+        </div>
+      </nav>
         
       </main>
  

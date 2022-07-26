@@ -9,14 +9,14 @@ const toolbar = props => (
         <div>
             <DrawerToggleButton click={props.drawerClickHandler}/>
         </div>
-        <div className="toolbarLogo"> <a href="/" > THE LOGO </a></div>
+        <div className="toolbarLogo"> <a href="/" > WELCOME </a></div>
         <div className="spacer"></div>
 
         <div className="toolbarNavigationItems">
             <ul>
-                <li> <a href="/"> UPLOAD </a></li>
+                <li> <a href="/"> ADMIN PAGE </a></li>
                 <li> <a href="/"> STATISTICS </a></li>
-                <li> <a href="/"> MORE </a></li>
+                <li> <a href="/"> EXIT </a></li>
 
             </ul>
 

@@ -9,6 +9,8 @@ const sideDrawer = props =>{
         <ul>
             <li><a href="/">UPLOAD</a></li>
             <li><a href="/">STATISTICS</a></li>
+            <li><a href="/">EDIT PROFILE</a></li>
+            <li><a href="/">EXIT</a></li>
         </ul>
     </nav>
     )
