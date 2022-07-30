@@ -1,9 +1,10 @@
 import React,{ useEffect, useState } from "react";
 import validation from "./validation";
+import axios, { Axios } from 'axios';
 
 const SignupForm = ({submitForm}) => {
 
-
+   
     const [values, setValues] = useState({
         fullname: "",
         email: "",
@@ -20,13 +21,29 @@ const SignupForm = ({submitForm}) => {
         });
     };
 
+    const Demo=()=>
+    {
+        console.log('password is ',values.password)
+        console.log('username is again ',values.fullname)
+        console.log('email is again ',values.email)
+        
+        
+        axios.post('http://localhost:5000/api/insert',{newUsername: values.fullname, newEmail: values.email, newPassword: values.password })
+        .then(response => {
+            console.log(response)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+        
+    }
+
     const handleFormSubmit = (event) => {
         
         event.preventDefault();
         setErrors(validation(values));
         setDataIsCorrect(true);
     };
-
 
 
     useEffect(()=>{
@@ -90,7 +107,7 @@ const SignupForm = ({submitForm}) => {
 
             </div>
             <div>
-                <button className="submit" onClick={handleFormSubmit}>
+                <button className="submit" onClick={Demo }>
                 Sign Up
                 </button>
              </div> 
