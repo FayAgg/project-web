@@ -18,6 +18,8 @@ const Form = () => {
         <SignupFormSuccess />
       )}
      </div>
+
+     
   );
   
 };

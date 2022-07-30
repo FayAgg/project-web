@@ -12,8 +12,8 @@ const validation = (values) => {
     }
     if(!values.password){
         errors.password="Password is required.";
-    } else if(values.password.length < 5){
-         errors.password="Password must be more than five  characters.";
+    } else if(!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(values.password)){
+         errors.password="Password must: be more than eight characters, contain at least one capital letter, a numbers and one symbol(eg #$*&@) .";
       }
 
     return errors;
